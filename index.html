@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- refresh to next page in sequence -->
+    <meta http-equiv="refresh" content="30; url=./project.html">
+    <link rel="stylesheet" href="style.css">
+    <!-- get icons from fontawesome (weather icons) -->
+    <script src="https://kit.fontawesome.com/374e75c3ea.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <!-- Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="page-title">RHHS</h1>
+    </header>
+    
+    <div class="info-container">
+        <section id="time">
+            <!-- time and date -->
+            <h2 id="exactTime">00:00:00</h2>
+            <h3 id="date">January 1, 2024</h3>
+        </section>
+    
+        <section id="weather">
+            <div class="weather-header">
+                <!-- weather icon -->
+                <i class="fa-solid fa-cloud-sun" id="weather-icon"></i>
+                <div>
+                    <h2 class="temp">5°C</h2>
+                    <h3 class="city">Richmond Hill</h2>
+                </div>
+            </div>
+            <!-- humidity, wind -->
+            <div class="weather-container">
+                <div class="weather-column">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="weather-info">
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="weather-column">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="weather-info">
+                        <p class="wind">10 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+    </div>
+
+</body>
+</html>

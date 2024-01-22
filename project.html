@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15; url=./event.html">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/374e75c3ea.js" crossorigin="anonymous"></script>
+    <title>Project</title>
+    <!-- Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2 id="exactTime" class="header-time">00:00:00</h2>
+        <h1 class="page-title">RHHS</h1>
+        <div class="header-weather">
+            <i id="weather-icon" class="fa-solid fa-cloud-sun"></i>
+            <h2 class="temp" id="header-temp">5°C</h2>
+        </div>
+    </header>
+
+    <!-- image carousel -->
+    <section id="project-container">
+        <div id="image-carousel">
+            <!-- images need to be manually added -->
+            <div class="carousel-item"><img id="img-1" src="musicEditor.png" alt="Music Editor by Matthew Pacitto"></div>
+            <div class="carousel-item"><img id="img-2" src="soulSaga.png" alt="Soul Saga by Mithulan Nanthakumar"></div>
+            <div class="carousel-item"><img id="img-3" src="https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/cosmosmagazine.com/wp-content/uploads/2020/02/190624_sea_otters_full-1440x863.jpg" alt="img3"></div>
+        </div>
+        <div class="img-num">
+            <!-- points are auto-created to equal num of images -->
+        </div>
+        <!-- adjusts the inner html through js to match the hard-coded authour -->
+        <div id="authour"></div>
+    </section>
+
+</body>
+</html>

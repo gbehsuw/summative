@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30; url=./index.html">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/374e75c3ea.js" crossorigin="anonymous"></script>
+    <title>Time Table</title>
+    <!-- Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2 id="exactTime" class="header-time">00:00:00</h2>
+        <h1 class="page-title">RHHS</h1>
+        <div class="header-weather">
+            <i id="weather-icon" class="fa-solid fa-cloud-sun"></i>
+            <h2 class="temp" id="header-temp">5°C</h2>
+        </div>
+    </header>
+
+    <section class="timetable-container">
+        <!-- time table -->
+        <div class="timetable-item" id="schedule">
+            <div class="timetable-table">
+                <!-- period column -->
+                <div id="timetable-period-col">
+                    <div id="timetable-period-title">Period</div>
+                    <div id="timetable-period">
+                        <!-- period names are added here -->
+                    </div>
+                </div>
+                <!-- time column -->
+                <div id="timetable-time-col">
+                    <div id="timetable-time-title">Time</div>
+                    <div id="timetable-time">
+                        <!-- timing is added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- lib schedule -->
+        <div class="timetable-item" id="library-container">
+            <h2 class="library-title">Library Status</h2>
+            <div class="library-table">
+                <!-- period column -->
+                <div id="library-period-col">
+                    <div id="lib-period-title">Period</div>
+                    <div id="lib-period">
+                        <!-- period names are added here -->
+                    </div>
+                </div> 
+                <!-- status column -->
+                <div id="library-status-col">
+                    <div id="lib-status-title">Status</div>
+                    <div id="lib-status">
+                        <!-- status is added here -->
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <!-- clubs -->
+        <div class="timetable-item" id="club-list-container">
+            <div class="club-slide">
+                <!-- clubs are added here -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

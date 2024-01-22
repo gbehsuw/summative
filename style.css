@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Set padding inside */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* RHHS title head */
+.page-title {
+    font-size: 3rem;
+    font-weight: 900;
+    /* Make text a gradient by clipping background to text */
+    background: -webkit-linear-gradient(180deg, #25edb8, #F9959D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* to display time RHHS and weather */
+header {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+/* home index page */
+.info-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    font-weight: 400;
+}
+
+/* time section */
+#time {
+    background: linear-gradient(135deg, #25edb8, #F9959D);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 5rem;
+    font-weight: 900;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* date */
+#date {
+    margin-top: -2.8rem;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* title for weather info */
+.weather-header {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: -20px 0 15px;
+}
+
+/* container for weahter info */
+.weather-container {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* display humidity / wind centred */
+.weather-column {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* humidity and wind icon */
+.weather-column i {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+/* temperature text */
+.temp {
+    font-size: 5rem;
+}
+
+/* city text */
+.city {
+    font-size: 2rem;
+    margin-top: -20px;
+}
+
+/* weather section */
+#weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #25edb8, #F9959D);
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    height: 50%;
+}
+
+/* humidity and wind fontsize */
+.humidity, .wind {
+    font-size: 2rem;
+}
+
+/* big weather icon */
+.weather-header i {
+    margin: 0 10%;
+    font-size: 7rem;
+}
+
+/* projects */
+#project-container, #event-container {
+    max-width: 60%;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+
+/* carousels (both project and event) */
+#image-carousel, #event-carousel {
+    display: flex;
+    transition: transform 0.75s ease-in-out;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+    overflow: visible;
+}
+
+/* carousel items / event items */
+.carousel-item, .event {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+/* style images to look consistent */
+.carousel-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+/* container for points */
+.img-num {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* circles to represent img num */
+.point {
+    /* div needs to be in a row */
+    display: inline-block;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 0 10px;
+    background-color: white;
+}
+
+/* first one on load needs to be coloured */
+#point-img-1 {
+    background-color: #25edb8;
+}
+
+/* creator of image */
+#authour {
+    text-align: center;
+    font-weight: 700;
+    color: #25edb8;
+    margin-top: 10px;
+}
+
+/* events */
+#event-container {
+    height: 85vh;
+    margin: 20vh auto;
+}
+
+/* event title */
+.event-title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #25edb8, #F9959D);;
+}
+
+/* event desc. */
+.event-description {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* timetable */
+.timetable-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 85vh;
+    justify-content: space-around;
+}
+
+/* schedule, library, and club containers */
+.timetable-item {
+    height: 90%;
+}
+
+/* titles */
+#timetable-period-title, #timetable-time-title {
+    background: linear-gradient(135deg, #25edb8, #F9959D);
+    font-size: 2.5rem;
+    border-radius: 8px;
+    padding: 20px 20px 25px;
+    font-weight: 700;
+}
+
+/* values that are read from google sheet */
+#timetable-period, #timetable-time {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+/* column css */
+#timetable-period-col {
+     width: 60%;
+}
+
+#timetable-time-col {
+    width: 40%;
+}
+
+#timetable-period-col, #timetable-time-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* time table section */
+#schedule {
+    text-align: center;
+    width: 25%;
+}
+
+/* table css */
+.library-table, .timetable-table {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+/* maximize space between two columns */
+.timetable-table {
+    justify-content: space-between;
+}
+
+#library-container {
+    display: flex;
+    flex-direction: column;
+    /* Account for 2px border for table */
+    margin-top: 2px;
+    width: 25%;
+    text-align: center;
+}
+
+#library-period-col, #library-status-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#lib-period-title, #lib-status-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.library-title {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #25edb8, #F9959D);
+    border-radius: 8px;
+    padding: 10px 10px 20px;
+}
+
+.lib-period-cell, .lib-status-cell, #lib-period-title, #lib-status-title {
+    padding: 10px;
+}
+
+#lib-period, #lib-status {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* even spacing between elements */
+    justify-content: space-around;
+}
+
+/* transparent gradient for clubs */
+#club-list-container:before, #club-list-container:after {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    content: "";
+    z-index: 2;
+}
+
+/* linear gradients */
+#club-list-container:before {
+    top: 0;
+    background: linear-gradient(0deg, rgba(255,255,255,0), black);
+}
+
+#club-list-container:after {
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0), black);
+}
+
+/* https://stackoverflow.com/questions/10733080/position-absolute-bottom-0-does-not-work-when-parent-position-is-relative */
+/* My bottom property was not working for :After and it was because I had no height for the parent */
+#club-list-container {
+    position: relative;
+    height: 100%;
+    width: 25%;
+}
+
+.club-slide .club {
+    height: 50px;
+}
+
+.club-slide {
+    display: flex;
+    flex-direction: column;
+    animation: 30s slide infinite linear;
+}
+
+.club {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #25edb8, #F9959D);
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* the club sliding animation named slide :O */
+@keyframes slide {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        /* move upwards as duplication list is below the first list */
+        transform: translateY(-100%);
+    }
+}
+/* the animation relies on having two duplicate lists to seem infinite */
+
+/* Header css for project, event, and timetable where time and weather are displayed*/
+.header-time, #header-temp {
+    font-size: 1.5rem;
+    font: 700;
+}
+
+.header-time {
+    color: #F9959D;
+    width: 110px;
+}
+
+.header-weather {
+    display: flex;
+    align-items: center;
+    color: #25edb8;
+}
+
+.header-weather i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
