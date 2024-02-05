@@ -20,7 +20,7 @@ const pointContainer = document.querySelector(".img-num")
 const imgPoints = [];
 const authour = document.getElementById("authour");
 // hard coded list for the creators of the code snippets
-const creators = ["Matthew P", "Mithulan N", "N/A"]
+const creators = ["Matthew P", "Mithulan N", "Tully and Harry"]
 
 // Event Carousel
 const eventCarousel = document.getElementById("event-carousel");
